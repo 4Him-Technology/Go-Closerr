@@ -11,5 +11,6 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss(), ...(mode === "artifact" ? [viteSingleFile()] : [])],
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
   server: { port: Number(process.env.PORT) || 5174 },
+  preview: { port: Number(process.env.PORT) || 4174 },
   build: mode === "artifact" ? { outDir: "dist-artifact", chunkSizeWarningLimit: 4000 } : undefined,
 }))
