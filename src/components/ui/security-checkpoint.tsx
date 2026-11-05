@@ -58,7 +58,7 @@ export function SecurityCheckpointBlueLines({
                 width: mounted ? "100%" : "0%",
                 transition: `width 1s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.08 + 0.15}s`,
                 background:
-                  "linear-gradient(90deg, transparent 0%, rgba(221,242,178,0.3) 10%, rgba(166,226,46,0.6) 40%, rgba(146,207,22,0.9) 100%)",
+                  "linear-gradient(90deg, transparent 0%, rgba(201,214,238,0.3) 10%, rgba(31,75,153,0.6) 40%, rgba(11,31,68,0.9) 100%)",
               }}
             />
           </div>
@@ -102,7 +102,7 @@ export function SecurityCheckpointRedLines({
                 width: mounted && cardLeft > 0 ? cardLeft : 0,
                 transition: `width 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.08 + 0.2}s`,
                 background:
-                  "linear-gradient(90deg, transparent 0%, rgba(55,100,0,0.12) 10%, rgba(55,100,0,0.35) 40%, rgba(55,100,0,0.7) 100%)",
+                  "linear-gradient(90deg, transparent 0%, rgba(0,230,118,0.12) 10%, rgba(0,230,118,0.35) 40%, rgba(0,200,102,0.7) 100%)",
               }}
             />
             <span
@@ -116,7 +116,7 @@ export function SecurityCheckpointRedLines({
                 height: 24,
                 borderRadius: "50%",
                 background:
-                  "radial-gradient(circle, rgba(166,226,46,0.45) 0%, rgba(166,226,46,0.15) 50%, transparent 70%)",
+                  "radial-gradient(circle, rgba(0,230,118,0.45) 0%, rgba(0,230,118,0.15) 50%, transparent 70%)",
                 opacity: mounted ? 1 : 0,
                 transition: `opacity 0.3s ease ${i * 0.08 + 0.85}s`,
               }}
@@ -131,7 +131,7 @@ export function SecurityCheckpointRedLines({
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
-                background: "#376400",
+                background: "#00c866",
                 opacity: mounted ? 1 : 0,
                 transition: `opacity 0.3s ease ${i * 0.08 + 0.9}s`,
               }}
@@ -192,7 +192,7 @@ export const SecurityCheckpointCard = React.forwardRef<
               width: 3,
               height: 20,
               borderRadius: 2,
-              background: "#a6e22e",
+              background: "#00e676",
             }}
           />
           <span

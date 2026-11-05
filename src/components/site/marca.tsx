@@ -1,12 +1,14 @@
 import { cn } from "@/lib/utils"
 
-// Marca conforme a logo enviada: símbolo 3D verde-limão (recortado do arquivo original, fundo transparente)
-// e "Gocloserr" em cinza escuro. shortcut: o texto é composto na fonte; trocar pelo arquivo completo da logo quando ele estiver no projeto.
-export function Marca({ className, tamanho = 34 }: { className?: string; tamanho?: number }) {
-  return (
-    <span className={cn("inline-flex items-center gap-2.5 font-heading text-[22px] font-bold tracking-[-0.02em] text-[#3a3a3a]", className)}>
-      <img src="./marca.png" alt="" width={Math.round(tamanho * 1.24)} height={tamanho} decoding="async" className="shrink-0" />
-      Gocloserr
-    </span>
-  )
+// Logo da metch a partir dos arquivos originais (PNG com fundo transparente, recortados por scripts-logo.py).
+// "cabecalho": símbolo + nome, sem o slogan, que ficaria ilegível nesse tamanho. "completa": com "Encontre, conecte, opere.".
+const LOGOS = {
+  cabecalho: { src: "./logo-cabecalho.png", w: 611, h: 212 },
+  completa: { src: "./logo.png", w: 623, h: 224 },
+  branca: { src: "./logo-branco.png", w: 681, h: 250 },
+} as const
+
+export function Marca({ variante = "cabecalho", altura = 34, alt = "", className }: { variante?: keyof typeof LOGOS; altura?: number; alt?: string; className?: string }) {
+  const l = LOGOS[variante]
+  return <img src={l.src} alt={alt} width={Math.round((altura * l.w) / l.h)} height={altura} decoding="async" className={cn("block shrink-0", className)} />
 }

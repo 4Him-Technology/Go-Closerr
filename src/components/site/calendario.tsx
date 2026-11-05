@@ -44,7 +44,7 @@ function Mes({ espaco, base, sel, escolher }: { espaco: Espaco; base: Date; sel:
               )}
             >
               {escolhido && <motion.span layoutId="dia-escolhido" className="absolute inset-0 rounded-full bg-foreground" transition={MOLA_RAPIDA} />}
-              {t && !escolhido && <span className="absolute inset-[3px] rounded-full bg-marca-suave" aria-hidden />}
+              {t && !escolhido && <span className="absolute inset-[3px] rounded-full bg-azul-suave" aria-hidden />}
               <span className={cn("relative", escolhido && "text-white")}>{i + 1}</span>
               {t && <span className={cn("absolute bottom-1 size-1 rounded-full", escolhido ? "bg-marca" : "bg-marca-tinta")} aria-hidden />}
             </button>
@@ -75,7 +75,7 @@ export function Calendario({ espaco, sel, escolher, mes, setMes }: { espaco: Esp
         </div>
       </motion.div>
       <div className="mt-4 flex flex-wrap gap-4 text-xs text-muted-foreground">
-        <span className="flex items-center gap-2"><span className="size-3.5 rounded-full bg-marca-suave ring-1 ring-marca-media" aria-hidden /> Com turno livre</span>
+        <span className="flex items-center gap-2"><span className="size-3.5 rounded-full bg-azul-suave ring-1 ring-azul-medio" aria-hidden /> Com turno livre</span>
         <span className="flex items-center gap-2"><span className="size-3.5 rounded-full bg-foreground" aria-hidden /> Dia escolhido</span>
       </div>
     </div>

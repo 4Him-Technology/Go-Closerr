@@ -1,4 +1,4 @@
-# Gocloserr - regras do projeto
+# metch - regras do projeto
 
 Valem para qualquer pessoa ou agente, de qualquer modelo. Visão do produto e telas no [README](README.md).
 
@@ -14,7 +14,9 @@ Valem para qualquer pessoa ou agente, de qualquer modelo. Visão do produto e te
 ## Convenções
 
 - Código, nomes, textos e commits em português do Brasil. Nunca usar travessão (U+2014): use hífen.
-- Marca: "Gocloserr" (dois "r"). Lema: "O espaço que você precisa, onde você precisa." Tema único claro, fundo branco; tokens em `src/index.css`. Verde-limão só como preenchimento, texto em verde escuro (`marca-tinta`) para manter contraste.
+- Marca: "metch", sempre minúsculo, na logo e nos textos. Assinatura da logo: "Encontre, conecte, opere." Lema usado no site: "O espaço que você precisa, onde você precisa." (confirmar se continua com a identidade nova).
+- Identidade: manual em `docs/marca/`. Paleta: primária `#00E676`, secundária `#0B1F44`, apoio `#64748B`, fundo `#F3F6FA`; tokens em `src/index.css`. Tema claro, fundo branco. O azul-marinho é a cor predominante (botões, destaques, faixas, cards principais; tokens `azul*`). O verde é só acento (sucesso, segurança, favorito, marcações; tokens `marca*`), nunca com texto branco por cima; texto verde usa `marca-tinta` (`#007A4D`).
+- Logo sempre pelos arquivos originais (`src/components/site/marca.tsx`), nunca redesenhada.
 - Referência visual: páginas do Airbnb e do Mercado Livre, adaptadas para centros cirúrgicos.
 - Hero, animação e componente animado vêm das ferramentas escolhidas pelo cliente (21st.dev, cult-ui, shadergradient) e das skills de design (design-motion-principles). Não compor hero "à mão". Ao adaptar um componente de terceiros, registrar a origem no topo do arquivo.
 - Motion: entradas com opacidade, deslocamento curto e blur, mola sem quique (`src/lib/motion.ts`); saídas mais discretas que as entradas; só `transform`, `opacity` e `filter`; sempre respeitar `prefers-reduced-motion` (`MotionConfig reducedMotion="user"`).

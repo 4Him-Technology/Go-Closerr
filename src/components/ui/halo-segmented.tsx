@@ -125,7 +125,7 @@ export function HaloSegmented({
             className="-bottom-4 absolute h-14 w-44 blur-xl"
             style={{
               background:
-                "linear-gradient(90deg, #c6f23a, #a6e22e, #6ab208, #c6f23a)",
+                "linear-gradient(90deg, #7aa2e8, #1f4b99, #0b1f44, #7aa2e8)",
             }}
             transition={{
               duration: reduceMotion ? 0.01 : 6,
@@ -137,7 +137,7 @@ export function HaloSegmented({
             animate={{ left: ["65%", "10%", "65%"] }}
             className="-bottom-3 absolute h-11 w-36 blur-lg"
             style={{
-              background: "linear-gradient(90deg, #ddf2b2, #92cf16, #a6e22e)",
+              background: "linear-gradient(90deg, #c9d6ee, #2a5cb8, #00e676)",
             }}
             transition={{
               duration: reduceMotion ? 0.01 : 5,

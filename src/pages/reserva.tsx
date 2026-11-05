@@ -142,7 +142,7 @@ function Acoes({ voltar, rotulo, desativado }: { voltar?: () => void; rotulo: st
       ) : (
         <span />
       )}
-      <motion.button type="submit" disabled={desativado} whileTap={{ scale: 0.97 }} className="h-14 rounded-full bg-foreground px-8 text-[17px] font-bold text-white transition-colors hover:bg-[#283021] disabled:opacity-50">
+      <motion.button type="submit" disabled={desativado} whileTap={{ scale: 0.97 }} className="h-14 rounded-full bg-foreground px-8 text-[17px] font-bold text-white transition-colors hover:bg-[#132d5e] disabled:opacity-50">
         {rotulo}
       </motion.button>
     </div>
@@ -178,7 +178,7 @@ function EtapaDados({ avancar }: { avancar: () => void }) {
       <button
         type="button"
         onClick={() => f.preencher({ nome: "Dra. Helena Duarte Ramos", doc: cpfExemplo(), crm: "148392", crmUf: "SP", email: "helena.ramos@exemplo.com.br", tel: "(11) 98765-4321" })}
-        className="mt-5 text-sm font-semibold text-marca-tinta underline underline-offset-4"
+        className="mt-5 text-sm font-semibold text-azul-tinta underline underline-offset-4"
       >
         Preencher com dados de exemplo
       </button>
@@ -198,7 +198,7 @@ function EtapaRevisao({ voltar, avancar }: { voltar: (n: number) => void; avanca
       <h3 className="flex items-center justify-between font-sans text-base font-bold tracking-normal">
         {titulo}
         {editar && (
-          <button type="button" onClick={editar} className="text-sm font-semibold text-marca-tinta underline underline-offset-4">
+          <button type="button" onClick={editar} className="text-sm font-semibold text-azul-tinta underline underline-offset-4">
             Editar
           </button>
         )}
@@ -270,7 +270,7 @@ function EtapaRevisao({ voltar, avancar }: { voltar: (n: number) => void; avanca
           aria-describedby="erro-aceite"
           className="mt-0.5 size-5 shrink-0 accent-foreground"
         />
-        <span>Li e aceito as regras do espaço e os termos de uso da Gocloserr.</span>
+        <span>Li e aceito as regras do espaço e os termos de uso da metch.</span>
       </label>
       <p id="erro-aceite" className="mt-2 text-sm font-medium text-destructive" aria-live="polite">
         {erro}
@@ -332,14 +332,14 @@ function EtapaPagamento({ voltar, avancar }: { voltar: () => void; avancar: () =
             <button
               type="button"
               onClick={() => f.preencher({ cartao: "4242 4242 4242 4242", titular: "HELENA D RAMOS", validade: `12/${String(hoje.getFullYear() + 3).slice(2)}`, cvv: "123" })}
-              className="mt-5 text-sm font-semibold text-marca-tinta underline underline-offset-4"
+              className="mt-5 text-sm font-semibold text-azul-tinta underline underline-offset-4"
             >
               Usar cartão de teste
             </button>
           </motion.div>
         ) : (
           <motion.div key="pix" initial={{ opacity: 0, y: 6, filter: "blur(4px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} exit={{ opacity: 0, transition: { duration: 0.12 } }} transition={MOLA_RAPIDA} className="mt-6 flex gap-3 rounded-2xl bg-superficie p-5 text-muted-foreground">
-            <QrCode className="size-6 shrink-0 text-marca-tinta" aria-hidden />
+            <QrCode className="size-6 shrink-0 text-azul-tinta" aria-hidden />
             <p>O QR Code e o código Pix copia e cola aparecem logo depois da verificação. A sala fica guardada por 30 minutos até o pagamento cair.</p>
           </motion.div>
         )}
@@ -413,7 +413,7 @@ function EtapaVerificacao({ voltar, concluir }: { voltar: () => void; concluir: 
   if (processando)
     return (
       <div className="flex flex-col items-center gap-6 py-6 text-center" role="status">
-        <SecurityCheckpoint title="Gocloserr" subtitle="Verificação de segurança" message={pagamento.metodo === "pix" ? "Contato confirmado. Estamos gerando o seu Pix e guardando a sala." : "Contato confirmado. Estamos aprovando o pagamento e bloqueando a sala para você."} />
+        <SecurityCheckpoint title="metch" subtitle="Verificação de segurança" message={pagamento.metodo === "pix" ? "Contato confirmado. Estamos gerando o seu Pix e guardando a sala." : "Contato confirmado. Estamos aprovando o pagamento e bloqueando a sala para você."} />
         <p className="text-sm text-muted-foreground">Isso leva só alguns segundos.</p>
       </div>
     )
@@ -490,7 +490,7 @@ function EtapaVerificacao({ voltar, concluir }: { voltar: () => void; concluir: 
                     ev.preventDefault()
                     digitar(i, ev.clipboardData.getData("text"))
                   }}
-                  className="h-16 w-[calc((100%-40px)/6)] max-w-14 rounded-2xl border border-input bg-white text-center font-heading text-2xl font-extrabold tabular transition-[border-color,box-shadow] outline-none focus:border-ring focus:ring-3 focus:ring-marca-media aria-invalid:border-destructive"
+                  className="h-16 w-[calc((100%-40px)/6)] max-w-14 rounded-2xl border border-input bg-white text-center font-heading text-2xl font-extrabold tabular transition-[border-color,box-shadow] outline-none focus:border-ring focus:ring-3 focus:ring-azul-medio aria-invalid:border-destructive"
                 />
               ))}
             </div>
@@ -503,7 +503,7 @@ function EtapaVerificacao({ voltar, concluir }: { voltar: () => void; concluir: 
               ) : (
                 <>
                   Não chegou?{" "}
-                  <button type="button" onClick={enviar} className="font-semibold text-marca-tinta underline underline-offset-4">
+                  <button type="button" onClick={enviar} className="font-semibold text-azul-tinta underline underline-offset-4">
                     Reenviar código
                   </button>
                 </>

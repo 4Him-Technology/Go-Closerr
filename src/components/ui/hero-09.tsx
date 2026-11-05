@@ -18,7 +18,7 @@ export interface Hero09Props {
   searchButtonText?: string
   heroImage: string
   heroAlt?: string
-  /** troca a busca genérica por um formulário próprio (Gocloserr: busca em pílula com cidade, data e turno) */
+  /** troca a busca genérica por um formulário próprio (metch: busca em pílula com cidade, data e turno) */
   search?: React.ReactNode
   /** selo acima do título */
   eyebrow?: React.ReactNode
@@ -29,7 +29,7 @@ export interface Hero09Props {
   bottomText?: string
   animation?: 'none' | 'subtle'
   variant?: 'standard' | 'compact'
-  /** 'split': cartão de busca sobre a foto, como a página inicial do Airbnb (acréscimo Gocloserr) */
+  /** 'split': cartão de busca sobre a foto, como a página inicial do Airbnb (acréscimo metch) */
   layout?: 'centered' | 'split'
   /** legenda clicável sobre a foto no layout split */
   imageCaption?: React.ReactNode

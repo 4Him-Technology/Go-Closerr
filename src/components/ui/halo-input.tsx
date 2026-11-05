@@ -54,14 +54,14 @@ function AnimatedControlShell({
               className="absolute inset-0 blur-2xl"
               style={{
                 background:
-                  "radial-gradient(90% 70% at 50% 100%, rgba(166,226,46,0.32), rgba(106,178,8,0.12) 48%, transparent 62%)",
+                  "radial-gradient(90% 70% at 50% 100%, rgba(31,75,153,0.30), rgba(11,31,68,0.12) 48%, transparent 62%)",
               }}
             />
             <div
               className="absolute inset-0 opacity-70 blur-xl dark:opacity-50"
               style={{
                 background:
-                  "radial-gradient(70% 55% at 30% 0%, rgba(198,242,58,0.22), rgba(146,207,22,0.08) 45%, transparent 58%)",
+                  "radial-gradient(70% 55% at 30% 0%, rgba(122,162,232,0.22), rgba(31,75,153,0.08) 45%, transparent 58%)",
               }}
             />
           </div>
@@ -78,7 +78,7 @@ function AnimatedControlShell({
             className="-bottom-4 absolute h-14 w-44 blur-xl"
             style={{
               background:
-                "linear-gradient(90deg, #c6f23a, #a6e22e, #6ab208, #c6f23a)",
+                "linear-gradient(90deg, #7aa2e8, #1f4b99, #0b1f44, #7aa2e8)",
             }}
             transition={{
               duration: reduceMotion ? 0.01 : 6,
@@ -90,7 +90,7 @@ function AnimatedControlShell({
             animate={{ left: ["65%", "10%", "65%"] }}
             className="-bottom-3 absolute h-11 w-36 blur-lg"
             style={{
-              background: "linear-gradient(90deg, #ddf2b2, #92cf16, #a6e22e)",
+              background: "linear-gradient(90deg, #c9d6ee, #2a5cb8, #00e676)",
             }}
             transition={{
               duration: reduceMotion ? 0.01 : 5,
@@ -107,7 +107,7 @@ function AnimatedControlShell({
       */}
       <div
         className={cn(
-          "relative z-1 border border-[color-mix(in_oklch,var(--border)_72%,oklch(0.9_0.08_125))] outline-none",
+          "relative z-1 border border-[color-mix(in_oklch,var(--border)_72%,oklch(0.9_0.04_260))] outline-none",
           "shadow-[0_1px_2px_rgba(0,0,0,0.03),0_6px_18px_rgba(0,0,0,0.04)]",
           "dark:border-border/80 dark:shadow-[0_1px_2px_rgba(0,0,0,0.28),0_6px_22px_rgba(0,0,0,0.32)]",
           /* Inset rim only - concentric with 11px border − 1px (see `CONTENT_RADIUS`). */
