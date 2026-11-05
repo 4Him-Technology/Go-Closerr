@@ -89,15 +89,15 @@ export function CardEspaco({ espaco: e, data, indice = 0, className }: { espaco:
         <p className="text-sm text-muted-foreground">{cidadeDe(e)}</p>
         {livres ? (
           <>
-            <span className="mt-1 inline-flex w-fit items-baseline gap-1.5 rounded-full bg-marca px-3 py-1 text-sm font-semibold tabular">
-              <span className="text-[11px] tracking-wide uppercase opacity-70">Livre em</span>
+            <span className="mt-1 inline-flex w-fit items-baseline gap-1.5 rounded-full bg-azul px-3 py-1 text-sm font-semibold text-white tabular">
+              <span className="text-[11px] tracking-wide text-marca uppercase">Livre em</span>
               {dataCurta(deChave(data!))}
             </span>
             <span className="text-xs text-muted-foreground">{listaPt(livres.map((t) => TURNO[t].nome))}</span>
           </>
         ) : (
-          <span className="mt-1 inline-flex w-fit items-baseline gap-1.5 rounded-full bg-marca px-3 py-1 text-sm font-semibold tabular">
-            <span className="text-[11px] tracking-wide uppercase opacity-70">Próxima data</span>
+          <span className="mt-1 inline-flex w-fit items-baseline gap-1.5 rounded-full bg-azul px-3 py-1 text-sm font-semibold text-white tabular">
+            <span className="text-[11px] tracking-wide text-marca uppercase">Próxima data</span>
             {dataCurta(e.proxima)}
           </span>
         )}

@@ -67,7 +67,7 @@ export function Espacos() {
               exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.12 } }}
               transition={MOLA_RAPIDA}
               onClick={() => setFiltro({ [c.k]: "" })}
-              className="inline-flex items-center gap-1.5 rounded-full bg-marca-suave px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-marca-media"
+              className="inline-flex items-center gap-1.5 rounded-full bg-azul-suave px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-azul-medio"
               aria-label={`Remover filtro ${c.txt}`}
             >
               {c.txt}
@@ -76,7 +76,7 @@ export function Espacos() {
           ))}
         </AnimatePresence>
         {chips.length > 1 && (
-          <button type="button" onClick={() => setFiltro({ cidade: "", data: "", turno: "", esp: "" })} className="ml-1 text-sm font-semibold text-marca-tinta underline underline-offset-4">
+          <button type="button" onClick={() => setFiltro({ cidade: "", data: "", turno: "", esp: "" })} className="ml-1 text-sm font-semibold text-azul-tinta underline underline-offset-4">
             Limpar tudo
           </button>
         )}

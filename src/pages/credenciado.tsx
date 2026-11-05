@@ -25,21 +25,21 @@ export function Credenciado() {
         <HeroDitheringRoot
           srTitle="Capitalize o seu espaço ocioso"
           title="Capitalize o seu espaço ocioso"
-          subtitle="Seja um credenciado Gocloserr"
-          description="Seus horários livres de centro cirúrgico aparecem para cirurgiões que estão procurando sala agora. Você publica a agenda; a Gocloserr cuida da reserva, da verificação e do pagamento."
-          desktopShaderProps={{ colorBack: "#00000000", colorFront: "#92cf16", shape: "sphere", type: "4x4", size: 2.2, speed: 0.6, scale: 0.7 }}
-          mobileShaderProps={{ colorBack: "#00000000", colorFront: "#a6e22e", shape: "sphere", speed: 0.5, scale: 0.6 }}
-          className="relative overflow-hidden rounded-[2rem] bg-marca-suave"
+          subtitle="Seja um credenciado metch"
+          description="Seus horários livres de centro cirúrgico aparecem para cirurgiões que estão procurando sala agora. Você publica a agenda; a metch cuida da reserva, da verificação e do pagamento."
+          desktopShaderProps={{ colorBack: "#00000000", colorFront: "#1f4b99", shape: "sphere", type: "4x4", size: 2.2, speed: 0.6, scale: 0.7 }}
+          mobileShaderProps={{ colorBack: "#00000000", colorFront: "#1f4b99", shape: "sphere", speed: 0.5, scale: 0.6 }}
+          className="relative overflow-hidden rounded-[2rem] bg-azul-suave"
         >
           <HeroDitheringContainer className="px-6 py-12 md:px-12">
             <HeroDitheringContent>
               <HeroDitheringHeading>
                 {/* o componente já põe o título num h1 para leitores de tela */}
-                <motion.p {...ENTRAR} className="text-xs font-bold tracking-[0.14em] text-marca-tinta uppercase">Para hospitais e clínicas</motion.p>
+                <motion.p {...ENTRAR} className="text-xs font-bold tracking-[0.14em] text-azul-tinta uppercase">Para hospitais e clínicas</motion.p>
                 <motion.p {...ENTRAR} transition={atraso(1, 0.08)} aria-hidden className="mt-3 font-heading text-[clamp(2.2rem,5vw,3.8rem)] leading-[1.03] font-extrabold tracking-[-0.04em]">
                   Capitalize o seu <span className="bg-[linear-gradient(transparent_60%,var(--marca)_60%,var(--marca)_90%,transparent_90%)]">espaço ocioso</span>
                 </motion.p>
-                <motion.p {...ENTRAR} transition={atraso(2, 0.08)} className="mt-3 font-heading text-xl font-bold">Seja um credenciado Gocloserr</motion.p>
+                <motion.p {...ENTRAR} transition={atraso(2, 0.08)} className="mt-3 font-heading text-xl font-bold">Seja um credenciado metch</motion.p>
               </HeroDitheringHeading>
               <motion.div {...ENTRAR} transition={atraso(3, 0.08)}>
                 <HeroDitheringDescription descriptionClassName="text-lg text-muted-foreground" />
@@ -68,7 +68,7 @@ export function Credenciado() {
         <section aria-label="Benefícios" className="grid gap-4 pt-14 md:grid-cols-3">
           {BENEFICIOS.map(({ Icone, t, d }, i) => (
             <motion.div key={t} {...AO_ROLAR} transition={atraso(i, 0.06)} className="flex flex-col gap-2 rounded-3xl bg-white p-7 sombra-card">
-              <span className="mb-2 grid size-12 place-items-center rounded-2xl bg-marca-suave">
+              <span className="mb-2 grid size-12 place-items-center rounded-2xl bg-azul-suave">
                 <Icone className="size-6" aria-hidden />
               </span>
               <h2 className="text-lg font-bold">{t}</h2>
@@ -136,7 +136,7 @@ export function Credenciado() {
                 </div>
                 <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
                   <p className="text-sm text-muted-foreground">Usamos estes dados só para falar sobre o credenciamento.</p>
-                  <motion.button type="submit" whileTap={{ scale: 0.97 }} className="h-14 rounded-full bg-marca px-8 text-[17px] font-bold transition-colors hover:bg-marca-forte">
+                  <motion.button type="submit" whileTap={{ scale: 0.97 }} className="h-14 rounded-full bg-azul px-8 text-[17px] font-bold text-white transition-colors hover:bg-azul-forte">
                     Enviar cadastro
                   </motion.button>
                 </div>

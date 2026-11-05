@@ -70,7 +70,7 @@ export function BuscaPilula({ id = "busca", className, variante = "pilula" }: { 
             </label>
           ))}
         </div>
-        <motion.button type="submit" whileTap={{ scale: 0.98 }} className="mt-1 flex h-12 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#b8ee3c,#92cf16)] font-bold text-foreground transition-[filter] hover:brightness-95">
+        <motion.button type="submit" whileTap={{ scale: 0.98 }} className="mt-1 flex h-12 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#0b1f44,#1f4b99)] font-bold text-white transition-[filter] hover:brightness-110">
           <Search className="size-[18px]" aria-hidden />
           Buscar sala
         </motion.button>
@@ -105,7 +105,7 @@ export function BuscaPilula({ id = "busca", className, variante = "pilula" }: { 
       <motion.button
         type="submit"
         whileTap={{ scale: 0.96 }}
-        className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-marca px-5 font-semibold text-foreground transition-colors hover:bg-marca-forte md:ml-1 md:size-12 md:px-0"
+        className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-azul px-5 font-semibold text-white transition-colors hover:bg-azul-forte md:ml-1 md:size-12 md:px-0"
         aria-label="Buscar"
       >
         <Search className="size-5" aria-hidden />

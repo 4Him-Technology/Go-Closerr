@@ -11,7 +11,7 @@ import { CIDADES, ESPACO, ESPACOS, cidadeDe, dataCurta } from "@/data/espacos"
 import { useApp } from "@/lib/app"
 import { AO_ROLAR, MOLA, atraso } from "@/lib/motion"
 
-const DESTAQUE = ESPACO["jardim-acacias"]
+const DESTAQUE = ESPACO["vila-aurora"]
 
 const PERGUNTAS = [
   ["Quem pode reservar um centro cirúrgico?", "Cirurgiões com CRM ativo ou empresas médicas. Na reserva você informa CPF ou CNPJ, CRM e UF, e confirma o e-mail ou o celular com um código antes de pagar."],
@@ -35,10 +35,10 @@ function Fileira({ titulo, subtitulo, children }: { titulo: string; subtitulo?: 
           {subtitulo && <p className="mt-0.5 text-sm text-muted-foreground">{subtitulo}</p>}
         </div>
         <div className="hidden gap-2 md:flex">
-          <button type="button" onClick={() => rolar(-1)} aria-label="Ver anteriores" className="grid size-8 place-items-center rounded-full bg-superficie transition-[background-color,transform] hover:bg-marca-suave active:scale-95">
+          <button type="button" onClick={() => rolar(-1)} aria-label="Ver anteriores" className="grid size-8 place-items-center rounded-full bg-superficie transition-[background-color,transform] hover:bg-azul-suave active:scale-95">
             <ChevronLeft className="size-4" aria-hidden />
           </button>
-          <button type="button" onClick={() => rolar(1)} aria-label="Ver próximos" className="grid size-8 place-items-center rounded-full bg-superficie transition-[background-color,transform] hover:bg-marca-suave active:scale-95">
+          <button type="button" onClick={() => rolar(1)} aria-label="Ver próximos" className="grid size-8 place-items-center rounded-full bg-superficie transition-[background-color,transform] hover:bg-azul-suave active:scale-95">
             <ChevronRight className="size-4" aria-hidden />
           </button>
         </div>
@@ -85,7 +85,7 @@ export function Inicio() {
               <b className="block">{DESTAQUE.nome}</b>
               <span className="text-muted-foreground">{cidadeDe(DESTAQUE)} · próxima data {dataCurta(DESTAQUE.proxima)}</span>
             </span>
-            <span className="grid size-8 place-items-center rounded-full bg-marca transition-transform group-hover:translate-x-0.5">
+            <span className="grid size-8 place-items-center rounded-full bg-azul text-white transition-transform group-hover:translate-x-0.5">
               <ArrowRight className="size-4" aria-hidden />
             </span>
           </a>
@@ -113,8 +113,8 @@ export function Inicio() {
         <section aria-label="Atalhos" className="grid gap-4 pt-16 md:grid-cols-3">
           {[
             { href: "#espacos", Icone: CalendarCheck, titulo: "Espaços disponíveis", texto: "Compare fotos, tour 360°, equipamentos e datas livres de cada centro cirúrgico.", cta: "Ver espaços", destaque: false },
-            { href: "#credenciado", Icone: Building2, titulo: "Cadastre o seu espaço", texto: "Capitalize o seu espaço ocioso: seja um credenciado Gocloserr.", cta: "Quero ser credenciado", destaque: true },
-            { href: "#sobre", Icone: Info, titulo: "Sobre nós", texto: "Vamos capitalizar espaços ociosos ofertando-os a quem tem a demanda.", cta: "Conheça a Gocloserr", destaque: false },
+            { href: "#credenciado", Icone: Building2, titulo: "Cadastre o seu espaço", texto: "Capitalize o seu espaço ocioso: seja um credenciado metch.", cta: "Quero ser credenciado", destaque: true },
+            { href: "#sobre", Icone: Info, titulo: "Sobre nós", texto: "Vamos capitalizar espaços ociosos ofertando-os a quem tem a demanda.", cta: "Conheça a metch", destaque: false },
           ].map((c, i) => (
             <motion.a
               key={c.href}
@@ -122,13 +122,13 @@ export function Inicio() {
               {...AO_ROLAR}
               transition={atraso(i, 0.06)}
               whileHover={{ y: -3, transition: MOLA }}
-              className={`group flex flex-col gap-3 rounded-3xl p-7 transition-shadow hover:sombra-card-forte ${c.destaque ? "bg-marca" : "bg-white sombra-card"}`}
+              className={`group flex flex-col gap-3 rounded-3xl p-7 transition-shadow hover:sombra-card-forte ${c.destaque ? "bg-azul text-white" : "bg-white sombra-card"}`}
             >
-              <span className={`mb-2 grid size-12 place-items-center rounded-2xl ${c.destaque ? "bg-white" : "bg-marca-suave"}`}>
+              <span className={`mb-2 grid size-12 place-items-center rounded-2xl ${c.destaque ? "bg-white/10 text-marca" : "bg-azul-suave"}`}>
                 <c.Icone className="size-6" aria-hidden />
               </span>
               <h3 className="text-[22px] font-extrabold">{c.titulo}</h3>
-              <p className={c.destaque ? "text-foreground" : "text-muted-foreground"}>{c.texto}</p>
+              <p className={c.destaque ? "text-white/80" : "text-muted-foreground"}>{c.texto}</p>
               <span className="mt-auto inline-flex items-center gap-1.5 pt-2 font-semibold">
                 {c.cta}
                 <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
@@ -161,7 +161,7 @@ export function Inicio() {
             <h2 id="h-anuncie" className="text-[clamp(1.7rem,3vw,2.4rem)] leading-tight font-extrabold">Capitalize o seu espaço ocioso</h2>
             <p className="max-w-md text-white/75">Publique os turnos em que suas salas ficam paradas e receba reservas de cirurgiões verificados. Você define dias, valores e especialidades.</p>
             <a href="#credenciado" className="mt-2 inline-flex h-12 w-fit items-center gap-2 rounded-full bg-marca px-6 font-bold text-foreground transition-transform active:scale-[0.97]">
-              Seja um credenciado Gocloserr <ArrowRight className="size-4" aria-hidden />
+              Seja um credenciado metch <ArrowRight className="size-4" aria-hidden />
             </a>
           </div>
           <div className="relative min-h-[260px]">

@@ -56,7 +56,7 @@ export function Espaco({ espaco: e }: { espaco: TEspaco }) {
           </motion.h1>
           <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[15px] text-muted-foreground">
             <span className="inline-flex items-center gap-1"><MapPin className="size-4" aria-hidden /> {e.endereco} · {cidadeDe(e)}</span>
-            <span className="inline-flex items-center gap-1 font-semibold text-marca-tinta"><BadgeCheck className="size-4" aria-hidden /> Credenciado Gocloserr</span>
+            <span className="inline-flex items-center gap-1 font-semibold text-marca-tinta"><BadgeCheck className="size-4" aria-hidden /> Credenciado metch</span>
           </p>
         </div>
         <motion.button type="button" whileTap={{ scale: 0.95 }} onClick={() => alternarFavorito(e.id)} aria-pressed={fav} className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold underline-offset-4 transition-colors hover:bg-superficie">
@@ -130,7 +130,7 @@ export function Espaco({ espaco: e }: { espaco: TEspaco }) {
             <ul className="mt-5 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
               {e.equip.map((x, i) => (
                 <motion.li key={x} {...AO_ROLAR} transition={atraso(i, 0.03)} className="flex items-start gap-3">
-                  <Check className="mt-0.5 size-5 shrink-0 text-marca-tinta" aria-hidden />
+                  <Check className="mt-0.5 size-5 shrink-0 text-azul-tinta" aria-hidden />
                   <span>{x}</span>
                 </motion.li>
               ))}
@@ -156,7 +156,7 @@ export function Espaco({ espaco: e }: { espaco: TEspaco }) {
                         className={cn(
                           "relative flex cursor-pointer flex-col gap-0.5 rounded-2xl p-4 transition-[box-shadow,background-color]",
                           ok ? "bg-white sombra-card hover:sombra-card-forte" : "cursor-not-allowed bg-superficie opacity-55",
-                          marcado && "bg-marca-suave ring-2 ring-foreground"
+                          marcado && "bg-azul-suave ring-2 ring-foreground"
                         )}
                       >
                         <input type="checkbox" className="sr-only" disabled={!ok} checked={marcado} onChange={() => alternarTurno(t.id)} />
@@ -205,7 +205,7 @@ export function Espaco({ espaco: e }: { espaco: TEspaco }) {
               onClick={reservar}
               disabled={!sel.turnos.length}
               whileTap={sel.turnos.length ? { scale: 0.97 } : undefined}
-              className="h-14 rounded-full bg-marca text-[17px] font-bold transition-colors hover:bg-marca-forte disabled:cursor-not-allowed disabled:bg-superficie disabled:text-muted-foreground"
+              className="h-14 rounded-full bg-azul text-[17px] font-bold text-white transition-colors hover:bg-azul-forte disabled:cursor-not-allowed disabled:bg-superficie disabled:text-muted-foreground"
             >
               {sel.turnos.length ? (
                 <>Reservar por {parado ? reais(total) : <RollingNumber value={total} format={reais} stiffness={170} damping={26} />}</>

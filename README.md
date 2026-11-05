@@ -1,8 +1,10 @@
-# Gocloserr
+# metch
+
+![metch](public/logo.png)
 
 **O espaço que você precisa, onde você precisa.**
 
-Protótipo navegável do marketplace de locação de centros cirúrgicos. A Gocloserr faz a ponte entre cirurgiões, que têm consultório mas dependem de um centro cirúrgico locado para operar, e hospitais e clínicas com salas ociosas. O cirurgião encontra o espaço, vê fotos, equipamentos e datas livres e reserva sem precisar ligar para ninguém.
+Protótipo navegável do marketplace de locação de centros cirúrgicos. A metch faz a ponte entre cirurgiões, que têm consultório mas dependem de um centro cirúrgico locado para operar, e hospitais e clínicas com salas ociosas. O cirurgião encontra o espaço, vê fotos, equipamentos e datas livres e reserva sem precisar ligar para ninguém.
 
 > Protótipo com dados fictícios. Nenhum pagamento é feito e nenhuma mensagem é enviada. Não há autenticação nem backend nesta fase.
 
@@ -35,6 +37,17 @@ Abre em `http://localhost:5174`.
 | `npm test` | Testes das validações (CPF, CNPJ, cartão, máscaras e regras dos formulários) |
 | `npm run build` | Build normal em `dist/` |
 | `npm run build:artifact` | HTML único em `dist-artifact/` para publicar como artifact do claude.ai (as fotos vão em `dist-artifact/fotos`) |
+
+## Identidade visual
+
+Manual em `docs/marca/manual-identidade.webp` e arquivos originais da logo em `docs/marca/`. `python scripts-logo.py docs/marca` gera as versões usadas no site (`public/logo.png`, `logo-cabecalho.png`, `logo-branco.png`, `simbolo.png`, `favicon.png`).
+
+| Cor | Uso |
+| --- | --- |
+| `#0B1F44` | Cor predominante: botões, destaques, faixas, cards principais e texto |
+| `#00E676` | Acento: sucesso, segurança, favorito e marcações; nunca com texto branco por cima |
+| `#64748B` | Apoio: textos secundários |
+| `#F3F6FA` | Fundo de seções e superfícies |
 
 ## Stack
 
@@ -69,6 +82,5 @@ As rotas usam hash (`#espacos`, `#espaco-vila-aurora`, `#reserva`) para funciona
 
 ## Próximos passos
 
-- Logo final em arquivo (`public/logo.png`) no lugar do símbolo recortado e do texto composto.
 - Fotos e vídeos 360° reais de cada centro credenciado.
 - Login, painel do credenciado (agenda, preços, especialidades), backend, pagamento e envio real do código.

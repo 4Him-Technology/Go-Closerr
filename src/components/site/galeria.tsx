@@ -169,7 +169,7 @@ export function Galeria({ espaco, aberta, aba, foto, fechar }: { espaco: Espaco;
           >
             <div className="mb-4 flex items-center justify-between gap-4">
               <p className="font-heading text-lg font-extrabold">{espaco.nome}</p>
-              <button ref={botao} type="button" onClick={fechar} aria-label="Fechar" className="grid size-10 place-items-center rounded-full bg-superficie transition-colors hover:bg-marca-suave active:scale-95">
+              <button ref={botao} type="button" onClick={fechar} aria-label="Fechar" className="grid size-10 place-items-center rounded-full bg-superficie transition-colors hover:bg-azul-suave active:scale-95">
                 <X className="size-5" aria-hidden />
               </button>
             </div>
